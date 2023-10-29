@@ -1,5 +1,5 @@
 import "Confessions"
 
-pub fun main(): String {
+pub fun main(): [String] {
   return Confessions.confessions
 }
