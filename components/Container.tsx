@@ -2,8 +2,6 @@ import * as fcl from '@onflow/fcl'
 import { useEffect, useState } from 'react'
 import ReadHelloWorld from '../cadence/scripts/ReadHelloWorld.cdc'
 import UpdateHelloWorld from '../cadence/transactions/UpdateHelloWorld.cdc'
-import elementStyles from '../styles/Elements.module.css'
-import containerStyles from '../styles/Container.module.css'
 import useConfig from '../hooks/useConfig'
 import { createExplorerTransactionLink } from '../helpers/links'
 
@@ -58,17 +56,17 @@ export default function Container() {
   const openExplorerLink = (transactionId, network) => window.open(createExplorerTransactionLink({ network, transactionId }), '_blank')
 
   return (
-    <div className={containerStyles.container}>
+    <div>
       <h2>Query the Chain</h2>
       <div>
-        <button onClick={queryChain} className={elementStyles.button}>Query Greeting</button>
+        <button onClick={queryChain}>Query Greeting</button>
         <h4>Greeting on Chain: { chainGreeting }</h4>
       </div>
       <hr />
       <div>
         <h2>Mutate the Chain</h2>
         {!isEmulator(network) && (
-          <h4>Latest Transaction ID: <a className={elementStyles.link} onClick={() => {openExplorerLink(lastTransactionId, network)}}>{ lastTransactionId }</a></h4>
+          <h4>Latest Transaction ID: <a onClick={() => {openExplorerLink(lastTransactionId, network)}}>{ lastTransactionId }</a></h4>
         )}
         <h4>Latest Transaction Status: { transactionStatus }</h4>
         <form onSubmit={mutateGreeting}>
@@ -78,10 +76,9 @@ export default function Container() {
               placeholder='New Greeting'
               value={userGreetingInput}
               onChange={e => setUserGreetingInput(e.target.value)}
-              className={elementStyles.input}
             />
           </label>
-          <input type='submit' value='Submit' className={elementStyles.button} />
+          <input type='submit' value='Submit'  />
         </form>
       </div>
     </div>
