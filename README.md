@@ -1,1 +1,1 @@
-flow project based on nextjs scaffold
+decentralized flow project based on react & nextjs w/ local flow setup
