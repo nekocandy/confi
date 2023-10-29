@@ -1,9 +1,10 @@
 import * as fcl from '@onflow/fcl'
 import Head from 'next/head'
 import useCurrentUser from '../hooks/useCurrentUser'
+import Link from 'next/link'
 
 export default function Home() {
-  const { loggedIn } = useCurrentUser()
+  const { loggedIn, addr } = useCurrentUser()
 
   return (
     <div>
@@ -12,19 +13,26 @@ export default function Home() {
         <title>Flow project!</title>
       </Head>
 
-      <main className='h-screen flex items-center justify-center'>
+      <main className='h-screen flex flex-col items-center justify-center bg-zinc-900 text-white gap-6'>
 
-        Hello
-        <h1>
-          GG -{loggedIn} -
-        </h1>
+        <h1 className='font-mono font-bold uppercase text-4xl'>Welcome!</h1>
 
-    {
-      loggedIn ?
-        <button onClick={fcl.unauthenticate}>Log Out</button>
-        :
-        <button onClick={fcl.logIn}>Log In</button>
-    }
+        <button
+          onClick={loggedIn ? fcl.unauthenticate : fcl.authenticate}
+          className='bg-indigo-900 px-12 py-2 rounded-md uppercase'>
+          {
+            loggedIn ?
+              `Sign Out | ${addr}`
+              :
+              'Sign in using FLOW'
+          }
+        </button>
+
+        {
+          loggedIn && <Link className='underline' href={"/dashboard"}>
+            Head to dashboard
+          </Link>
+        }
 
       </main>
     </div>
