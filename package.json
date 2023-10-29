@@ -23,9 +23,12 @@
   "dependencies": {
     "@onflow/fcl": "1.4.1",
     "@onflow/typedefs": "1.1.0",
+    "git-embed": "^0.1.2",
     "next": "13.0.0",
+    "prismjs": "^1.29.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-embed-github-file-content": "^1.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
