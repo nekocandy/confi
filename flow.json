@@ -1,6 +1,7 @@
 {
 	"contracts": {
-		"HelloWorld": "cadence/contracts/HelloWorld.cdc"
+		"Confessions": "cadence/contracts/Confessions.cdc",
+		"HelloWorld": "cadence/contracts/Confessions.cdc"
 	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
@@ -23,7 +24,8 @@
 	"deployments": {
 		"emulator": {
 			"default": [
-				"HelloWorld"
+				"HelloWorld",
+				"Confessions"
 			]
 		}
 	}
