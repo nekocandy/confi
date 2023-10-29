@@ -2,8 +2,8 @@ pub contract Confessions {
 
   pub var confessions: [String]
 
-  pub fun addConfession(confession: String) {
-    self.confessions.append(confession)
+  pub fun addConfession(confessionToAdd: String) {
+    self.confessions.append(confessionToAdd)
   }
 
   init() {
