@@ -1,0 +1,19 @@
+[
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowContractAudits.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/StakingProxy.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowToken.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/NodeVersionBeacon.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowStorageFees.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowFees.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/testContracts",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowServiceAccount.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/LockedTokens.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowStakingCollection.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/FlowIDTableStaking.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/epochs",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/RandomBeaconHistory.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/testContracts/TestFlowIDTableStaking.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/epochs/FlowEpoch.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/epochs/FlowDKG.cdc",
+  "https://github.com/onflow/flow-core-contracts/blob/master/contracts/epochs/FlowClusterQC.cdc"
+]
