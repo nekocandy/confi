@@ -1,5 +1,5 @@
+import * as fcl from '@onflow/fcl'
 import Head from 'next/head'
-import Container from '../components/Container'
 import useCurrentUser from '../hooks/useCurrentUser'
 
 export default function Home() {
@@ -12,10 +12,19 @@ export default function Home() {
         <title>Flow project!</title>
       </Head>
 
-      <main>
+      <main className='h-screen flex items-center justify-center'>
 
-        {loggedIn && <Container />}
+        Hello
+        <h1>
+          GG -{loggedIn} -
+        </h1>
 
+    {
+      loggedIn ?
+        <button onClick={fcl.unauthenticate}>Log Out</button>
+        :
+        <button onClick={fcl.logIn}>Log In</button>
+    }
 
       </main>
     </div>
